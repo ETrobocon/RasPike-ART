@@ -150,7 +150,7 @@ SPIKE-RTのAPIがほぼ使えます。
 [https://spike-rt.github.io/spike-rt/en/html/index.html](https://spike-rt.github.io/spike-rt/en/html/index.html)
 
 制限などは下記を参照して下さい。
-[https://github.com/ytoi/RasPike-ART](https://github.com/ytoi/RasPike-ART)
+[https://github.com/ETrobocon/libraspike-art](https://github.com/ETrobocon/libraspike-art)
 
 EV3に関するAPI（モーターとかセンサー、ブロックに関するもの）は使えません。使用した場合は
 
