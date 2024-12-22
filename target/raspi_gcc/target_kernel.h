@@ -89,4 +89,17 @@
 #endif /* TMIN_INTPRI */
 #define TMAX_INTPRI		(-1)		/* 割込み優先度の最大値（最低値） */
 
+#if defined(__aarch64__)
+/* 64bitではタスクのスタックからdispatchされた場合にスタックが不足するので、強制的に加算する
+ kernel.hの定義を上書きする
+ 本来はkernel_target_impl.hで定義したいが、impl.hを読まないパスもあるのでここで定義する
+
+*/
+#define TOPPERS_COUNT_SZ(sz, unit)	((((sz)+20480) + (unit) - 1) / (unit))
+#define TOPPERS_ROUND_SZ(sz, unit)	((((sz)+20480) + (unit) - 1) & ~((unit) - 1))
+#endif
+
+
+
+
 #endif /* TOPPERS_TARGET_KERNEL_H */

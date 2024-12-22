@@ -164,10 +164,6 @@
 #define JMPBUF_SP                               13                       /* jmp_buf中でのSPの位置 */
 #define TASK_STACK_MERGIN               16U            /* #2 */
 #define DEFAULT_ISTKSZ                  20480        /* シグナルスタックのサイズ */
-/* 64bitではタスクのスタックからdispatchされた場合にスタックが不足するので、強制的に加算する
- kernel.hの定義を上書きする*/
-#define TOPPERS_COUNT_SZ(sz, unit)	((((sz)+DEFAULT_ISTKSZ) + (unit) - 1) / (unit))
-#define TOPPERS_ROUND_SZ(sz, unit)	((((sz)+DEFAULT_ISTKSZ) + (unit) - 1) & ~((unit) - 1))
 
 #else
 #error architecture not supported

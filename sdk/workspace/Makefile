@@ -26,7 +26,7 @@ DEVICE_CONFIG=../common/device_config_raspike-art.txt
 
 endif
 
-CLEAN_FILES+=../../RasPike-ART/lib/*.a
+CLEAN_FILES+=../../libraspike-art/lib/*.a
 
 
 start: appdir

@@ -273,10 +273,10 @@ CONFIG_EV3RT_APPLICATION = 1
 include @(APPLDIRS)/Makefile.inc
 
 #
-# For RasPike-ART
+# For libraspike-art
 #
 ifneq ($(USE_RASPIKE_ART),)
-RASPIKE-ART_DIR=../../RasPike-ART
+RASPIKE-ART_DIR=../../libraspike-art
 LIBRASPIKE-ART_DIR=$(RASPIKE-ART_DIR)/lib
 LIBRASPIKE-ART=libraspike-art.a
 include ../common/Makefile.raspike-art
