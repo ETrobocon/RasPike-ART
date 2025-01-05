@@ -7,7 +7,9 @@
 #ifndef SPIKE_CPP_API_PORT_H_
 #define SPIKE_CPP_API_PORT_H_
 
+extern "C" {
 #include "pbio/port.h"
+}
 
 /**
  * モータ/センサポート関連定義
@@ -18,12 +20,12 @@
  */
 enum class ePort
 {
-    PORT_A = 'A',    /**< SPIKE ポートA */
-    PORT_B = 'B',    /**< SPIKE ポートB */
-    PORT_C = 'C',    /**< SPIKE ポートC */
-    PORT_D = 'D',    /**< SPIKE ポートD */
-    PORT_E = 'E',    /**< SPIKE ポートE */
-    PORT_F = 'F'     /**< SPIKE ポートF */
+    PORT_A = PBIO_PORT_ID_A,    /**< SPIKE ポートA */
+    PORT_B = PBIO_PORT_ID_B,    /**< SPIKE ポートB */
+    PORT_C = PBIO_PORT_ID_C,    /**< SPIKE ポートC */
+    PORT_D = PBIO_PORT_ID_D,    /**< SPIKE ポートD */
+    PORT_E = PBIO_PORT_ID_E,    /**< SPIKE ポートE */
+    PORT_F = PBIO_PORT_ID_F     /**< SPIKE ポートF */
 };
 
 /** センサポート数 */
