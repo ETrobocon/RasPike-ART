@@ -18,7 +18,7 @@ extern "C" {
 /**
  * モータ/センサポート番号
  */
-enum class ePort
+enum class EPort
 {
     PORT_A = PBIO_PORT_ID_A,    /**< SPIKE ポートA */
     PORT_B = PBIO_PORT_ID_B,    /**< SPIKE ポートB */

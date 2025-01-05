@@ -26,7 +26,7 @@ public:
    * コンストラクタ 
    * @param port PUPポートID 
    */ 
-  ForceSensor(ePort port) { 
+  ForceSensor(EPort port) { 
     /* エラー時にはNULLが設定される */
     mDevice = pup_force_sensor_get_device(static_cast<pbio_port_id_t>(port));
   }
