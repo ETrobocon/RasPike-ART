@@ -87,9 +87,9 @@ namespace spikeapi {
      * param c 
      * return -
      */
-    void showNumber(const char c)
+    void showChar(const char c)
     {
-      hub_display_number(c);
+      hub_display_char(c);
     }
 
     /**
