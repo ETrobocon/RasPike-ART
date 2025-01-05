@@ -57,6 +57,9 @@ all:
 #
 TARGET = @(TARGET)
 
+# RasPike-ART
+USE_RASPIKE_ART=1
+
 #
 #  プログラミング言語の定義
 #

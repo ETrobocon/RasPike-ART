@@ -1,10 +1,11 @@
 #
-# Makefile for a workspace of EV3 Platform(ASP3).
+# Makefile for a workspace of RasPike-ART Platform(ASP3).
 #
 
 #
-# Include configurations of EV3RT(ASP3) SDK
+# Include configurations of RasPike-ART (ASP3) SDK
 #
+
 SDKDIR = ..
 WSPDIR = $(basename $(PWD))
 ASPMAKEFILE = Makefile.asp
