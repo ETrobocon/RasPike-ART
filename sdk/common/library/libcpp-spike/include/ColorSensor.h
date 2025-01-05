@@ -22,6 +22,18 @@ class ColorSensor
 {
 public:
 
+  struct RGB {
+    uint8_t r;
+    uint8_t g;
+    uint8_t b;
+  };
+
+  struct HSV {
+    uint16_t h;
+    uint8_t  s;
+    uint8_t  v;
+  };
+  
   /** 
    * コンストラクタ 
    * @param port PUPポートID 
@@ -32,10 +44,14 @@ public:
   
   /** 
    * カラーセンサのRGB値を取得する 
-   * @return RGB値、各色10ビット 
+   * @param  値を設定するRGB構造体、各色8ビット
+   * @return -
    */ 
-  pup_color_rgb_t getRGB() const { 
-    return pup_color_sensor_rgb(mDevice); 
+  void getRGB(RGB& rgb) const { 
+    pup_color_rgb_t pup_rgb = pup_color_sensor_rgb(mDevice);
+    rgb.r = pup_rgb.r;
+    rgb.g = pup_rgb.g;
+    rgb.b = pup_rgb.b;    
   } 
     
   /** 
@@ -43,8 +59,11 @@ public:
    * @param surface trueならば表面の色から、falseならば他の光源の色を検出する 
    * @return 色（hsvによる表現） 
    */ 
-  pup_color_hsv_t getColor(bool surface) const { 
-    return pup_color_sensor_color(mDevice, surface); 
+  void getColor(HSV& hsv, bool surface = true) const { 
+    pup_color_hsv_t pup_hsv = pup_color_sensor_color(mDevice, surface);
+    hsv.h = pup_hsv.h;
+    hsv.s = pup_hsv.s;
+    hsv.v = pup_hsv.v;
   } 
     
   /** 
@@ -52,8 +71,11 @@ public:
    * @param surface trueならば表面の色から、falseならば他の光源の色を検出する 
    * @return 色（hsvによる表現） 
    */ 
-  pup_color_hsv_t getHSV(bool surface) const { 
-    return pup_color_sensor_hsv(mDevice, surface); 
+  void getHSV(HSV& hsv, bool surface = true ) const { 
+    pup_color_hsv_t pup_hsv = pup_color_sensor_hsv(mDevice, surface);
+    hsv.h = pup_hsv.h;
+    hsv.s = pup_hsv.s;
+    hsv.v = pup_hsv.v;
   } 
     
   /** 
