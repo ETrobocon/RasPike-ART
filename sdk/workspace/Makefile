@@ -36,7 +36,7 @@ start: appdir
 
 startsim: appdir
 	$(ADDITIONAL_PRE_APPL)
-	sudo env LD_PRELOAD=../common/setjmp/libssetjmp.so ./asp -d $(DEVICE_CONFIG)
+	sudo env LD_PRELOAD=../common/setjmp/aarch64/libssetjmp.so ./asp -d $(DEVICE_CONFIG)
 
 debug: appdir
 	$(ADDITIONAL_PRE_APPL)

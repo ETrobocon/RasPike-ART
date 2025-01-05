@@ -7,8 +7,6 @@
 #ifndef SPIKE_CPP_API_BUTTON_H_
 #define SPIKE_CPP_API_BUTTON_H_
 
-#include "dto/ButtonStatusDto.h"
-
 namespace spikeapi {
 /**
  * SPIKE ボタンクラス
@@ -24,11 +22,34 @@ public:
     Button(void) = default;
 
     /**
-     * ボタンが押されているかを確認する
-     * @param pressed 押されているボタンのビットOR値（何も押されていなければ 0）を返す
+     * LEFTボタンが押されているかを確認する
+     * @param -
      * @return -
      */
-    ButtonStatusDto isPressed();
+   bool isLeftPressed();
+  
+    /**
+     * CENTERボタンが押されているかを確認する
+     * @param -
+     * @return -
+     */
+   bool isCenterPressed();
+
+    /**
+     * RIGHTボタンが押されているかを確認する
+     * @param -
+     * @return -
+     */
+   bool isRightPressed();
+
+    /**
+     * BRUETOOTHボタンが押されているかを確認する
+     * @param -
+     * @return -
+     */
+   bool isBluetoothPressed();
+
+  
 }; // class Button
 }  // namespace spikeapi
 
