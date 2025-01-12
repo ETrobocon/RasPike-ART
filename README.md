@@ -152,14 +152,21 @@ SPIKE-RTのAPIがほぼ使えます。
 制限などは下記を参照して下さい。
 [https://github.com/ETrobocon/libraspike-art](https://github.com/ETrobocon/libraspike-art)
 
-EV3に関するAPI（モーターとかセンサー、ブロックに関するもの）は使えません。使用した場合は
 
-```
-[WARN] RasPike-ART does not support EV3 API(addr = 128)
-```
+# EV3RT（もとのRasPike含む）からの移植について
 
-のようなprint文が出ます（APIによってはこれが出ず、無効な値が帰る場合もあります)。
-ASP3の関数は使用できます。
+EV3に関するAPI（モーターとかセンサー、ブロックに関するもの）は使えません。SPIKE APIに置き換えてください。
+
+また、
+```
+#include "ev3api.h"
+```
+は
+```
+#include "spikeapi.h"
+```
+に置き換えてください。
+
 
 # RasPike-ARTの更新
 
