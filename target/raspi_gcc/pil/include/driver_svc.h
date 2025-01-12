@@ -10,7 +10,8 @@ Inline ER_UINT
 cal_svc(FN fncd, intptr_t par1, intptr_t par2,
 							intptr_t par3, intptr_t par4, intptr_t par5)
 {
-	//TODO
+#if 0
+  //TODO
 	if (fncd >= SVC_TABLE_NUM) {
 		return E_PAR;
 	}
@@ -22,6 +23,7 @@ cal_svc(FN fncd, intptr_t par1, intptr_t par2,
 		return E_OBJ;
 	}
 	return fp->svcrtn(par1, par2, par3, par4, par5, fncd);
+#endif
 }
 
 

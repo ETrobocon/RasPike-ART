@@ -204,8 +204,9 @@ endif
 CDEFS := $(CDEFS) @(CDEFS)
 INCLUDES := -I. -I$(SRCDIR)/include $(INCLUDES) -I$(SRCDIR)
 # TODO: ev3api/src has header that is included from drivers
-INCLUDES := -I. -I$(SRCDIR)/include $(INCLUDES) -I$(SRCDIR) -I$(ATHRILLDIR)/athrill/apl/include -I../common/ev3api/include \
-	-I../common/ev3api/src
+# Change to SPIKEAPI
+INCLUDES := -I. -I$(SRCDIR)/include $(INCLUDES) -I$(SRCDIR) -I$(ATHRILLDIR)/athrill/apl/include -I../common/spikeapi/include \
+	-I../common/spikeapi/src
 LDFLAGS := $(LDFLAGS) @(LDFLAGS)
 LIBS := $(LIBS) $(CXXLIBS)
 CFLAGS = $(COPTS) $(CDEFS) $(INCLUDES)
@@ -218,8 +219,8 @@ APPLDIRS = @(APPLDIRS)
 APPL_CFG = @(CFGFILE)
 APPL_CDL = @(CDLFILE)
 
-#APPLDIRS += $(SRCDIR)/OBJ ../common ../common/ev3api ../common/ev3api/include
-#APPLDIRS += ../common/ev3api/src ../../target/v850_gcc ../../target/v850_gcc/pil/include
+#APPLDIRS += $(SRCDIR)/OBJ ../common ../common/spikespi ../common/spikeapi/include
+#APPLDIRS += ../common/spikespi/src ../../target/v850_gcc ../../target/v850_gcc/pil/include
 #APPLDIRS += ../../target/v850_gcc/pil/src
 #APPLDIRS += ../../target/v850_gcc/platform/src
 #APPLDIRS += ../../target/v850_gcc/platform/include
