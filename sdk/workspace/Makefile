@@ -1,10 +1,11 @@
 #
-# Makefile for a workspace of EV3 Platform(ASP3).
+# Makefile for a workspace of RasPike-ART Platform(ASP3).
 #
 
 #
-# Include configurations of EV3RT(ASP3) SDK
+# Include configurations of RasPike-ART (ASP3) SDK
 #
+
 SDKDIR = ..
 WSPDIR = $(basename $(PWD))
 ASPMAKEFILE = Makefile.asp
@@ -36,7 +37,7 @@ start: appdir
 
 startsim: appdir
 	$(ADDITIONAL_PRE_APPL)
-	sudo env LD_PRELOAD=../common/setjmp/libssetjmp.so ./asp -d $(DEVICE_CONFIG)
+	sudo env LD_PRELOAD=../common/setjmp/aarch64/libssetjmp.so ./asp -d $(DEVICE_CONFIG)
 
 debug: appdir
 	$(ADDITIONAL_PRE_APPL)

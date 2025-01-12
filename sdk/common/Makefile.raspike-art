@@ -3,12 +3,11 @@ WORKSPACE_LIB_TO_BUILD:=$(WORKSPACE_LIB_TO_BUILD) $(LIBRASPIKE-ART_DIR)/$(LIBRAS
 $(LIBRASPIKE-ART_DIR)/$(LIBRASPIKE-ART):
 	(cd $(RASPIKE-ART_DIR)/build/obj-libraspike-art;make)
 
-
-
 LIBPYBRICKS_DIR=$(RASPIKE-ART_DIR)/external/libpybricks
 
 
 INCLUDES += -I$(RASPIKE-ART_DIR)/drivers/include \
+	-I$(RASPIKE-ART_DIR)/drivers/include/spike \
 	-I$(RASPIKE-ART_DIR)/drivers/include/spike/pup \
 	-I$(RASPIKE-ART_DIR)/drivers/include/spike/hub \
 	-I$(RASPIKE-ART_DIR)/drivers \

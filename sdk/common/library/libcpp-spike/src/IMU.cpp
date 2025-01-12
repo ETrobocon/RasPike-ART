@@ -4,32 +4,30 @@
 // Copyright (c) 2025 Embedded Technology Software Design Robot Contest
 //
 
+extern "C" {
 #include <pbio/button.h>
 #include <pbio/error.h>
+}
 
 #include "IMU.h"
 
 using namespace spikeapi;
 
-AccelerationDto IMU::getAcceleration(void)
+void IMU::getAcceleration(IMU::Acceleration &accel)
 {
-    float accel[3];
-    hub_imu_get_acceleration(accel);
-    return AccelerationDto( 
-        accel[0], 
-        accel[1], 
-        accel[2]
-    );
+    float ac[3];
+    hub_imu_get_acceleration(ac);
+    accel.x = ac[0];
+    accel.y = ac[1];
+    accel.z = ac[2];
 }
 
-AngularVelocityDto IMU::getAngularVelocity(void)
+void IMU::getAngularVelocity(IMU::AngularVelocity &avel)
 {
-    float accel[3];
-    hub_imu_get_angular_velocity(accel);
-    return AngularVelocityDto( 
-        accel[0], 
-        accel[1], 
-        accel[2]
-    );
+    float av[3];
+    hub_imu_get_angular_velocity(av);
+    avel.x = av[0];
+    avel.y = av[1];
+    avel.z = av[2];
 }
 
