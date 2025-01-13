@@ -42,8 +42,8 @@ namespace spikeapi {
     }
 
     /**
-     * ハブ内蔵ディスプレイの表示方向を設定する
-     * param up 表示方向の上側
+     * ハブ内蔵ディスプレイを消灯する
+     * param  -
      * return -
      */
     void off() {
