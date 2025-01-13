@@ -96,17 +96,7 @@ Finished
 
 サンプルでsample_c5のspike版sample_c5_spikeがありますので、それをコンパイルしてみます。
 
-その前に、RasPike-ARTモードに切り替えるための設定として、Makefile.incにある記述について説明します。
-
-sample_c5_spike/Makefile.incを見ると
-
-```
-USE_RASPIKE_ART=1
-```
-
-という記述があります。この記述を行うことにより、sample_c5_spikeはRasPike-ARTのプログラムだということが認識されます。
-起動時のでdevice_configもsdk/common/device_config.txtではなく、sdk/common/device_config_raspike-art.txtが使われるように変更されます。
-必要なincludeパスも通りますので、
+SPIKEのAPIを使うには、
 
 ```
 #include "spike/pup/motor.h"
