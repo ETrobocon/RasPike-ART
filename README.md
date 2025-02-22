@@ -47,12 +47,11 @@ RasPike-ARTの構成は以下のようになります。
 
 ## ファイルの取得
 
-RasberryPiの任意のディレクトリで必要なファイルを取得します。（masterに統合された場合はcheckoutが不要になる見込みです）
+RasberryPiの任意のディレクトリで必要なファイルを取得します。
 
 ```
-git clone https://github.com/ETrobocon/RasPike-ART.git
+git clone --recursive https://github.com/ETrobocon/RasPike-ART.git
 cd RasPike-ART
-git submodule update --init --recursive
 ```
 
 ## SPIKEへのプログラム書き込み
