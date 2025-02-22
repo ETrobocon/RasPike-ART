@@ -32,7 +32,7 @@ RasPike-ARTはSPIKE側にSPIKE-RTで作られた受信ソフトウェア[librasp
 RasPike-ARTの構成は以下のようになります。
 **注意！）USBケーブルは充電専用のケーブルでは動作しません。通信ができるUSBケーブルを使う必要があります。**
 
-![RasPike-ART構成](https://github.com/user-attachments/assets/16850d10-4136-4c7b-84e8-31918b7e2d2f)
+![RasPike-ART構成](https://github.com/user-attachments/assets/0f806598-9e91-4606-ba27-edb468259ecf)
 
 
 # 使い方
