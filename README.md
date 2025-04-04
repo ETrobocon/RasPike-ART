@@ -39,11 +39,11 @@ RasPike-ARTの構成は以下のようになります。
 
 ## 使用できるRaspberryPiとOS
 
-現在確認しているのはRasPi4とRaspberry OS(64bit)です。
+現在確認しているのはRasPi4とRaspberry OS(64bit)のみです。従来RasPikeで使用していたBullseye 32bitでは動作しないので、注意してください。
 
+下記の環境で動作確認をしています。
 ```Linux raspberrypi 6.6.51+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.6.51-1+rpt3 (2024-10-08) aarch64 GNU/Linux```
 
-※RasPikeで制限があった32bit classicの制限はRasPike-ARTではなくなりました。
 
 ## ファイルの取得
 
