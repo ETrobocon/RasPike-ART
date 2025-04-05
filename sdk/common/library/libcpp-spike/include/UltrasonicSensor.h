@@ -26,7 +26,7 @@ public:
    * コンストラクタ 
    * @param port PUPポートID 
    */ 
-  UltrasonicSensor(ePort port) { 
+  UltrasonicSensor(EPort port) { 
     mDevice = pup_ultrasonic_sensor_get_device(static_cast<pbio_port_id_t>(port));
   }
     
