@@ -4,8 +4,8 @@
 
 /* センサーポートの定義 */
 static const pbio_port_id_t
-  color_sensor_port    = PBIO_PORT_ID_C,
-  left_motor_port      = PBIO_PORT_ID_E,
+  color_sensor_port    = PBIO_PORT_ID_E,
+  left_motor_port      = PBIO_PORT_ID_C,
   right_motor_port     = PBIO_PORT_ID_B; 
 
 /* メインタスク(起動時にのみ関数コールされる) */
