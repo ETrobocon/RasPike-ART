@@ -31,7 +31,7 @@ void LineTracer_Configure(pbio_port_id_t left_motor_port, pbio_port_id_t right_m
 void tracer_task(intptr_t unused) {
 
     int16_t steering_amount; /* ステアリング操舵量の計算 */
-    
+
     /* ステアリング操舵量の計算 */
     steering_amount = steering_amount_calculation();
 
@@ -48,16 +48,16 @@ static int16_t steering_amount_calculation(void){
     uint16_t  target_brightness; /* 目標輝度値 */
     float32_t diff_brightness;   /* 目標輝度との差分値 */
     int16_t   steering_amount;   /* ステアリング操舵量 */
-    pup_color_rgb_t rgb_val;
+    int32_t   ref;
 
     /* 目標輝度値の計算 */
     target_brightness = (WHITE_BRIGHTNESS + BLACK_BRIGHTNESS) / 2;
 
     /* カラーセンサ値の取得 */
-    rgb_val = pup_color_sensor_rgb(fg_color_sensor);
+    ref = pup_color_sensor_reflection(fg_color_sensor);
 
     /* 目標輝度値とカラーセンサ値の差分を計算 */
-    diff_brightness = (float32_t)(target_brightness - rgb_val.g);
+    diff_brightness = (float32_t)(target_brightness - ref);
 
     /* ステアリング操舵量を計算 */
     steering_amount = (int16_t)(diff_brightness * STEERING_COEF);
