@@ -8,7 +8,7 @@
 static const pbio_port_id_t
   color_sensor_port    = PBIO_PORT_ID_E,
   left_motor_port      = PBIO_PORT_ID_B,
-  right_motor_port     = PBIO_PORT_ID_A;
+  right_motor_port     = PBIO_PORT_ID_A,
   force_sensor_port    = PBIO_PORT_ID_D;
 
 /* メインタスク(起動時にのみ関数コールされる) */
