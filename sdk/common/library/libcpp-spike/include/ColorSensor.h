@@ -44,7 +44,7 @@ public:
   
   /** 
    * カラーセンサのRGB値を取得する 
-   * @param  値を設定するRGB構造体、各色8ビット
+   * @param  値を設定するRGB構造体、各色10ビット
    * @return -
    */ 
   void getRGB(RGB& rgb) const { 
