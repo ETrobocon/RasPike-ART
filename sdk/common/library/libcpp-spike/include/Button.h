@@ -43,7 +43,7 @@ public:
   bool isRightPressed();
 
   /**
-   * BRUETOOTHボタンが押されているかを確認する
+   * BLUETOOTHボタンが押されているかを確認する
    * @param -
    * @return -
    */
