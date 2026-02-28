@@ -61,7 +61,7 @@ static RaspikeHeader common_header;
 static const VdevIfComMethod *cur_com = 0;
 static MpthrIdType vdev_thrid;
 
-static Std_ReturnType vdevProtRaspikeSilCb(int size, uintptr_t addr, void* data);
+static Std_ReturnType vdevProtRaspikeSilCb(int size, uintptr_t addr, const void* data);
 
 static Std_ReturnType vdev_thread_do_init(MpthrIdType id);
 static Std_ReturnType vdev_thread_do_proc(MpthrIdType id);
@@ -237,7 +237,7 @@ static RasPikeCommand send_order[] = {
 #define numof(table) (sizeof(table)/sizeof(table[0]))
 
 /* IOメモリへの書き込み */
-Std_ReturnType vdevProtRaspikeSilCb(int size, uintptr_t addr, void *data)
+Std_ReturnType vdevProtRaspikeSilCb(int size, uintptr_t addr, const void *data)
 {
   int len;
   static int is_first_call = 0;
