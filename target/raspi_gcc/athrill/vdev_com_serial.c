@@ -48,7 +48,7 @@ Std_ReturnType vdevSerialInit(void *obj)
   printf("Serial Opened fd=%d\n",device_fd);
 
   bzero(&tio, sizeof(tio));
-  tcgetattr(&tio,0);
+  tcgetattr(device_fd, &tio);
   tio.c_cflag =  (B115200 | CS8 | CLOCAL | CREAD);
   tio.c_cc[VMIN] = 0;
   tio.c_cc[VTIME] = 0;
